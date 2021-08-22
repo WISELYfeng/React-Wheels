@@ -1,14 +1,17 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     entry: {
         index: './lib/index.tsx'
     },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    },
     output: {
         path: path.resolve(__dirname, 'dist/lib'),
-        library: 'LiUI',
-        libraryTarget: 'umd'
+        library: 'ReUI',
+        libraryTarget: 'umd',
     },
     module: {
         rules: [
@@ -20,8 +23,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Reach-Wheels',
-            template: 'index.html'
+            template: 'index.html',
+            title: 'ReUI'
         })
-    ]
+    ],
 }
