@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-    mode: 'development',
+    // mode: 'development',
     entry: {
         index: './lib/index.tsx'
     },
@@ -21,10 +21,10 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: 'index.html',
-            title: 'ReUI'
-        })
-    ],
+    // plugins: [
+    //     new HtmlWebpackPlugin({
+    //         template: 'index.html',
+    //         title: 'ReUI'
+    //     })
+    // ],
 }
