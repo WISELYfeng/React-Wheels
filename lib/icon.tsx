@@ -1,4 +1,6 @@
 import React from 'react'
+import './icons/wechat.svg'
+
 
 interface IconProps{
     name: string;
@@ -6,7 +8,11 @@ interface IconProps{
 // Icon是一个FunctionComponent类型的组件，接收IconProps类型的参数
 const Icon: React.FunctionComponent<IconProps> = (props) => {
     return (
-        <span>{props.name}</span>
+        <span>
+            <svg>
+                <use xlinkHref={`#${props.name}`}></use>
+            </svg> 
+        </span>
     )
 }
 
