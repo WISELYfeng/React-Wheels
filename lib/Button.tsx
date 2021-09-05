@@ -2,7 +2,7 @@ import * as React from 'react'
 function Button() {
     return (
         <div>
-            button1
+            button2
         </div>
     )
 }

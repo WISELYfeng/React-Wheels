@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import Button from './Button';
+import Icon from './icon';
 
-ReactDom.render(<Button></Button>, document.body)
+const root = document.getElementById('root')
+ReactDom.render(<Icon name="2333"/>, root)
